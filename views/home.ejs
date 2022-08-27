@@ -1,0 +1,28 @@
+
+
+<%- include("partials/header"); -%>
+
+
+
+<h1><%=title%></h1>
+
+<p><%=text %></p>
+ 
+
+
+
+<% postitems.forEach(function(post){ %>
+ <h2> <%=  post.title %></h2>
+ <p><%= post.body.substring(0,100)+"..." %> <a href="/posts/<%= post.title %>">Read more</a>
+ </p>
+ <%})%>
+
+<%- include("partials/footer"); -%>
+
+
+
+<!-- <% for(let i=0;i<postitems.length;i++){%>
+
+    <h2><%=postitems[i].title%></h2>
+    <p><%=postitems[i].body%></p>
+<%}%> -->
